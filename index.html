@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .content{
+            display: flex;
+            justify-content: space-between;
+        }
+        .first-content{
+            width: 409px;
+            position: relative;
+        }
+        .first-content img{
+            width: 100%;
+            position:relative;
+        }
+
+        .second-content{
+            width:940px;
+
+            
+        }
+    .logo-with-text{
+        position: absolute;
+       padding:20px;
+        border:1px solid black;
+        background-color: rgba(0, 0 , 0, 0.5);
+        height:130px;
+        width: 100%;
+        top:100px;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+
+        
+    }
+
+    .logo-with-text img{
+        height: 100px;
+        width:100px;
+        
+        
+
+    }
+    .logo-with-text p{
+        
+        color: white;
+        font-size: 100px;
+        font-family: odin;
+        align-items: center;
+        
+        
+        
+    }
+
+    .first-p{
+        padding:50px;   
+    }
+    .formContainer{
+        padding: 0px 50px; }
+    
+    
+    .form{
+       display: flex;
+       background-color:white;
+       box-shadow: 2px 5px 5px opx rgba(0, 0 , 0, 0.5);
+       
+      
+
+
+    }
+    input:focus{
+        outline:1px solid blue;
+        box-shadow: 2px 5px 5px  0px rgba(0, 0, 0, 0.6);
+
+    }
+    .form2{
+        padding-left: 40px;
+    }
+
+   .first-p{
+       background-color: #f2f2f2;
+   }
+
+   button{
+       border-radius: 5px;
+       background-color: #596D48;
+       padding:10px  12px  8px 12px;
+       font-weight: bold;
+       border: none;
+       color: #f2f2f2;
+   }
+
+   .form3{
+    background-color: #f2f2f2;
+   
+    margin-left: 0;
+    margin-bottom:0;
+    margin-top: 30px;
+    padding-left:50px;
+    padding-top:20px;
+    padding-bottom:20px;
+    
+   }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="first-content">
+           <img src="D:\Landing Page\SIDE-HUSTLE\halie-west-25xggax4bSA-unsplash.jpg">
+           <div class="logo-with-text">
+               <img src="D:\images\odin-lined.png">
+               <p>ODIN</p>
+           </div>
+        </div>
+        <div class="second-content">
+            <div class="first-p">
+            <p>This is not a real online service! You know you need
+                something <br> like this in your life to help you 
+                realize your deepest dreams<br> Sign up now to get started</p>
+                <br>
+                <p>You <b><i>know</i></b> you want to</p> 
+            </div>
+            <div class="formContainer">
+                <p><b>Let's do this</b></p>
+                
+                <form action="#">
+                    <div class="form">
+                    <div class="form1">
+                        <label for="fname" >FIRST NAME:</label><br>
+                        <input type="text" id="fname" name="fname"  value="Thor"><br><br>
+
+                        <label for="email" >EMAIL:</label><br>
+                        <input type="email" id="email" name="email"><br><br>
+
+                        <label for="pwd" >PASSWORD:</label><br>
+                        <input type="password"  onchange="onChange()" name="password" ><br>
+                        
+                    </div>
+                    <div class="form2">
+                        <label for="lname">LAST NAME:</label><br>
+                        <input type="text" id="lname" name="lname" value="Odinson"><br><br>
+
+                        <label for="phone">PHONE NUMBER:</label><br>
+                        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"><br><br>
+
+                        <label for="pwd"> CONFIRM PASSWORD:</label><br>
+                        <input type="password"  onchange="onChange()" name="confirm" ><br>
+                       
+
+                    </div>    
+                    </div>
+                </div>
+
+                    <div class="form3">
+                        <button type="submit" onclick= "onChange()" >Create Account</button><br>
+
+                        <p>Already have an account? <a href="#">Log in</a></p>
+
+
+
+                    </div>
+
+                </form>
+
+            
+
+        </div>
+        
+    </div>
+
+    <script>
+        function onChange(){
+            const password = document.querySelector('input[name=password]');
+            const confirm = document.querySelector('input[name=confirm]');
+
+            if (confirm.value == password.value){
+                confirm.setCustomValidity('Good! passwords match!');
+            }  else { confirm.setCustomValidity('passwords do not match'); }
+        }
+    </script>
+</body>
+</html>
